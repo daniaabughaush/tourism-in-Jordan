@@ -7,13 +7,12 @@ function ColorSchemesExample() {
   return (
     <>
     
-      <Navbar bg="dark" variant="dark">
+      <Navbar style={{ backgroundColor: 'rgba(222, 109, 77, 0.973)'}} variant="dark">
         <Container>
-          <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+          <Navbar.Brand href="#home">TOUR IN JORDAN</Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link ><Link to="/">Home</Link></Nav.Link>
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
+           
           </Nav>
         </Container>
       </Navbar>

@@ -26,6 +26,33 @@ const Tours = () => {
 
     }
      
+    ,
+    {
+        id:3,
+        name:"Zarqa",
+        info:"erash is considered one of the largest and most well-preserved sites of Greek and Roman architecture in the world outside Italy. And is sometimes misleadingly referred to as the  or of Asia, referring to its size, extent of excavation and level of preservation.",
+        image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYKN3zS3PPLZEgYnAmtL-2iXnyn6w0bUOykQ&usqp=CAU"
+
+    }
+     
+    ,
+    {
+        id:3,
+        name:"Zarqa",
+        info:"erash is considered one of the largest and most well-preserved sites of Greek and Roman architecture in the world outside Italy. And is sometimes misleadingly referred to as the  or of Asia, referring to its size, extent of excavation and level of preservation.",
+        image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYKN3zS3PPLZEgYnAmtL-2iXnyn6w0bUOykQ&usqp=CAU"
+
+    }
+     
+    ,
+    {
+        id:3,
+        name:"Zarqa",
+        info:"erash is considered one of the largest and most well-preserved sites of Greek and Roman architecture in the world outside Italy. And is sometimes misleadingly referred to as the  or of Asia, referring to its size, extent of excavation and level of preservation.",
+        image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYKN3zS3PPLZEgYnAmtL-2iXnyn6w0bUOykQ&usqp=CAU"
+
+    }
+     
 
 ]
     const [tour,setTour]=useState([])
@@ -39,9 +66,10 @@ const Tours = () => {
     setTour(data)
 },[])
 
-console.log(tour)
+
   return (
     <div>
+        <div className='card'>
         {
             tour.map((place)=>(
                 <div className='cards'>
@@ -53,6 +81,7 @@ console.log(tour)
             </div>
             ))
         }
+        </div>
 
 
     </div>
