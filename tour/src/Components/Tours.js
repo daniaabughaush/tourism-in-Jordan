@@ -55,29 +55,32 @@ const Tours = () => {
      
 
 ]
-    const [tour,setTour]=useState([])
-    const[infoStyle,setStyle]=useState("hideText")
-    function showInfo(){
+    const [tour,setTour]=useState(data)
+    const [selectedTour, setSelectedTour] = useState(null);
 
-      setStyle("showText")
+    function showInfo(index) {
+        if (selectedTour === index) {
+            setSelectedTour(null);
+        } else {
+            setSelectedTour(index);
+        }
     }
-    useEffect(() =>{
-        
-    setTour(data)
-},[])
 
 
   return (
     <div>
         <div className='card'>
         {
-            tour.map((place)=>(
+            tour.map((place,index)=>(
                 <div className='cards'>
             <p>{place.name}</p>
             <img src={place.image} alt="Jordan Place"/>
-            <p className={infoStyle} >{place.info}</p>
-            <button onClick={()=>showInfo()}>Show Info</button>
-            {/* <button ><Link to="/city">to see more detials</Link></button> */}
+            <button onClick={()=>showInfo(index)}>Show Info</button>
+            {selectedTour === index && (
+            <div>
+            <p>{place.info}</p>
+            </div>
+            )}
             </div>
             ))
         }
